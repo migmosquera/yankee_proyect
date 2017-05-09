@@ -1,7 +1,7 @@
 com/yankee/facade/local/AbstractFacade.class
-com/yankee/facade/local/BoardFacade.class
+com/yankee/facade/local/LevelFacade.class
 com/yankee/facade/local/UserFacade.class
-com/yankee/business/facade/BoardBusinessFacade.class
+com/yankee/business/facade/LevelBusinessFacade.class
 com/yankee/business/facade/UserBusinessFacade.class
 com/yankee/facade/local/UserFacadeLocal.class
-com/yankee/facade/local/BoardFacadeLocal.class
+com/yankee/facade/local/LevelFacadeLocal.class

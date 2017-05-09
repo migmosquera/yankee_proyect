@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
     <artifactId>yankee_backend</artifactId>
-    <groupId>com.mycompany</groupId>
+    <groupId>com.yankee</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-    <groupId>com.mycompany</groupId>
+    <groupId>com.yankee</groupId>
     <artifactId>yankee_backend_persistence</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>ejb</packaging>

@@ -6,12 +6,8 @@
 package com.yankee.model;
 
 
-import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -21,10 +17,10 @@ import javax.persistence.OneToMany;
 public class User extends BasicAttributes{
 
     private String name;
-    private String email;
+    private String cedula;
     private String password;
-    private Integer level;
-    private List<Board> board;
+    @ManyToOne
+    private Level level;
 
     public String getName() {
         return name;
@@ -34,13 +30,13 @@ public class User extends BasicAttributes{
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    } 
 
     public String getPassword() {
         return password;
@@ -50,31 +46,20 @@ public class User extends BasicAttributes{
         this.password = password;
     }
 
-    public Integer getLevel() {
+    public Level getLevel() {
         return level;
     }
 
-    public void setLevel(Integer level) {
+    public void setLevel(Level level) {
         this.level = level;
     }
-    
-    @OneToMany(cascade={CascadeType.ALL},fetch= FetchType.EAGER, mappedBy = "user")
-    public List<Board> getBoard() {
-        return board;
-    }
 
-    public void setBoard(List<Board> board) {
-        this.board = board;
-    }
-    
-    
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
-
 
     @Override
     public boolean equals(Object object) {

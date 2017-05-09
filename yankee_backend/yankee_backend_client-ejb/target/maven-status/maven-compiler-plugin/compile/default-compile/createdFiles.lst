@@ -1,5 +1,5 @@
-com/yankee/model/Board.class
+com/yankee/model/Level.class
+com/yankee/facade/remote/LevelInterfazRemote.class
 com/yankee/model/User.class
 com/yankee/facade/remote/UserInterfazRemote.class
 com/yankee/model/BasicAttributes.class
-com/yankee/facade/remote/BoardInterfazRemote.class

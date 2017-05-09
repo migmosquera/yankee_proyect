@@ -1,5 +1,5 @@
-/home/syslife01/NetBeansProjects/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/model/BasicAttributes.java
-/home/syslife01/NetBeansProjects/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/facade/remote/UserInterfazRemote.java
-/home/syslife01/NetBeansProjects/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/model/Board.java
-/home/syslife01/NetBeansProjects/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/facade/remote/BoardInterfazRemote.java
-/home/syslife01/NetBeansProjects/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/model/User.java
+/home/syslife03/NetBeansProjects/yankee_proyect/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/facade/remote/LevelInterfazRemote.java
+/home/syslife03/NetBeansProjects/yankee_proyect/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/facade/remote/UserInterfazRemote.java
+/home/syslife03/NetBeansProjects/yankee_proyect/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/model/BasicAttributes.java
+/home/syslife03/NetBeansProjects/yankee_proyect/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/model/Level.java
+/home/syslife03/NetBeansProjects/yankee_proyect/yankee_backend/yankee_backend_client-ejb/src/main/java/com/yankee/model/User.java

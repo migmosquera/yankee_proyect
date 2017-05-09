@@ -23,7 +23,7 @@ import javax.ejb.Stateless;
 public class UserBusinessFacade implements UserInterfazRemote {
     
     @EJB
-    UserFacadeLocal userinterfazlocal;
+    UserFacadeLocal userfacadelocal;
     
     @Override
     public void create(User user) {
