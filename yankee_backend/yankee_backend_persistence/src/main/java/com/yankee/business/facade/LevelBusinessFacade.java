@@ -17,7 +17,7 @@ import javax.ejb.Remote;
  *
  * @author syslife03
  */
-@Stateless(name="LevelInterfazRemote",mappedName = LevelInterfazRemote.JNDI_REMOTE_NAME)
+@Stateless(name = "levelInterfazRemote", mappedName = LevelInterfazRemote.JNDI_REMOTE_NAME)
 @Remote(LevelInterfazRemote.class)
 public class LevelBusinessFacade implements LevelInterfazRemote{
 
@@ -25,12 +25,15 @@ public class LevelBusinessFacade implements LevelInterfazRemote{
     LevelFacadeLocal levelfacadelocal;
     
     @Override
-    public void create(Level level) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Level create(Level level) {
+       
+        levelfacadelocal.create(level);
+        return level;
+
     }
 
     @Override
-    public void edit(Level level) {
+    public Level edit(Level level) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -61,4 +64,5 @@ public class LevelBusinessFacade implements LevelInterfazRemote{
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
+
 }
