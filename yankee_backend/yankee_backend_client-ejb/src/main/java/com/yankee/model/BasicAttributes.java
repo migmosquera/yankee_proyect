@@ -7,6 +7,7 @@ package com.yankee.model;
 
 import java.io.Serializable;
 import java.util.Calendar;
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,23 +15,23 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
 /**
  *
- * @author syslife01
+ * @author conamerica15
  */
 @MappedSuperclass
-public class BasicAttributes implements Serializable {
-
-     Long id;
-    private Integer version;
+public class BasicAttributes implements Serializable {    
+    Long id;
+    private Integer version; 
     private Calendar modified;
     private Calendar created;
-   
-    
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public Long getId() {
         return id;
     }
@@ -38,18 +39,32 @@ public class BasicAttributes implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    
+
     @Version
+    @Column(name = "version")
     public Integer getVersion() {
+        if (version == null) {
+            version = 0;
+        }
         return version;
     }
 
     public void setVersion(Integer version) {
         this.version = version;
     }
-
     
-    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
+    @Column(name = "modified")
+    @Temporal(TemporalType.TIMESTAMP)
+    public Calendar getModified() {
+        return modified;
+    }
+
+    public void setModified(Calendar modified) {
+        this.modified = modified;
+    }
+
+    @Column(name = "created")
+    @Temporal(TemporalType.TIMESTAMP)
     public Calendar getCreated() {
         return created;
     }
@@ -57,25 +72,14 @@ public class BasicAttributes implements Serializable {
     public void setCreated(Calendar created) {
         this.created = created;
     }
-    
-    
-    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    public Calendar getModified() {
-        return modified;
-    }
-
-    public void setModified(Calendar modified) {
-        this.modified = modified;
-    }    
-
+           
     @PrePersist
-    public void prePersis(){
+    public void prePersist() {
         this.created = this.modified = Calendar.getInstance();
     }
-    
+
     @PreUpdate
-    public void preUpdate(){
+    public void preUdpate() {
         this.modified = Calendar.getInstance();
-    }
-    
+    }            
 }
