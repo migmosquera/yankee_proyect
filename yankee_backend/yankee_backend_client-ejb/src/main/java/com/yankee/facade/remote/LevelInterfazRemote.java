@@ -18,9 +18,9 @@ public interface LevelInterfazRemote {
     
     public final String JNDI_REMOTE_NAME = "ejb/levelInterfazRemote";
     
-     void create(Level level);
+    Level create(Level level);
 
-    void edit(Level level);
+    Level edit(Level level);
 
     void remove(Level level);
 
